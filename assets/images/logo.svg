@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Building Base -->
+  <rect x="15" y="45" width="70" height="50" fill="#1e3a5f" rx="2"/>
+  
+  <!-- Building Windows -->
+  <rect x="22" y="52" width="12" height="10" fill="url(#logoGradient)" rx="1"/>
+  <rect x="44" y="52" width="12" height="10" fill="url(#logoGradient)" rx="1"/>
+  <rect x="66" y="52" width="12" height="10" fill="url(#logoGradient)" rx="1"/>
+  
+  <rect x="22" y="68" width="12" height="10" fill="url(#logoGradient)" rx="1"/>
+  <rect x="44" y="68" width="12" height="10" fill="url(#logoGradient)" rx="1"/>
+  <rect x="66" y="68" width="12" height="10" fill="url(#logoGradient)" rx="1"/>
+  
+  <rect x="22" y="84" width="12" height="10" fill="url(#logoGradient)" rx="1"/>
+  <rect x="66" y="84" width="12" height="10" fill="url(#logoGradient)" rx="1"/>
+  
+  <!-- Door -->
+  <rect x="44" y="80" width="12" height="15" fill="url(#logoGradient)" rx="1"/>
+  
+  <!-- Crane -->
+  <rect x="75" y="10" width="4" height="35" fill="#1e3a5f"/>
+  <rect x="55" y="10" width="24" height="4" fill="url(#logoGradient)"/>
+  <rect x="55" y="10" width="4" height="8" fill="#1e3a5f"/>
+  
+  <!-- Crane Hook -->
+  <line x1="57" y1="18" x2="57" y2="32" stroke="#f59e0b" stroke-width="2"/>
+  <path d="M53 32 Q57 38 61 32" fill="none" stroke="#f59e0b" stroke-width="2"/>
+  
+  <!-- Hard Hat -->
+  <ellipse cx="30" cy="25" rx="15" ry="8" fill="url(#logoGradient)"/>
+  <rect x="15" y="25" width="30" height="5" fill="#d97706"/>
+  <rect x="20" y="30" width="20" height="3" fill="#1e3a5f"/>
+</svg>
