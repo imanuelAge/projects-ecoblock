@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Projects - Ecoblock Construction's portfolio showcasing completed residential, commercial, and architectural projects across Ghana.">
+    <meta name="keywords" content="construction projects, portfolio, completed projects, residential construction, commercial projects, Ghana">
+    <meta name="author" content="Ecoblock Construction">
+    <title>Our Projects | Ecoblock Construction</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/images/ecoblock-logo.svg" alt="Ecoblock Construction Logo" class="nav__logo-img">
+                <span class="nav__logo-text">ECOBLOCK<span class="highlight"></span></span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link">About Us</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#services" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="projects.html" class="nav__link active">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#testimonials" class="nav__link">Testimonials</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+                <button class="nav__close" id="nav-close" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="nav__actions">
+                <a href="index.html#contact" class="btn btn--primary nav__cta">Request a Quote</a>
+                <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Hero Section -->
+        <section class="hero hero--page">
+            <div class="hero__overlay"></div>
+            <div class="hero__content container">
+                <h1 class="hero__title">Our <span class="highlight">Projects</span></h1>
+                <p class="hero__description">
+                    Explore our extensive portfolio of completed projects showcasing 
+                    our expertise, craftsmanship, and commitment to excellence across 
+                    residential, commercial, and architectural sectors.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="projects__header">
+                    <h2 class="section__title">Featured <span class="highlight">Projects</span></h2>
+                    <p class="section__description">
+                        Explore our diverse portfolio of completed projects that showcase our expertise, 
+                        craftsmanship, and commitment to excellence across various construction sectors.
+                    </p>
+                </div>
+                
+                <div class="projects__filters">
+                    <button class="projects__filter active" data-filter="all">All Projects</button>
+                    <button class="projects__filter" data-filter="residential">EPS Foam</button>
+                    <button class="projects__filter" data-filter="commercial">Eco Panel</button>
+                    <button class="projects__filter" data-filter="infrastructure">Architectural Shapes & Designs</button>
+                </div>
+                
+                <div class="projects__grid">
+                    <!-- EPS Foam Projects -->
+                    <article class="project-card" data-category="residential">
+                        <div class="project-card__image">
+                            <img src="assets/projects-images/ecoblock-ecopanel-2.webp" 
+                                 alt="EPS Foam Residential Project" 
+                                 loading="lazy">
+                            <div class="project-card__overlay">
+                                <span class="project-card__category">EPS Foam</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Green Valley Housing Project</h3>
+                            <p class="project-card__location">
+                                <i class="fas fa-map-marker-alt"></i> Kumasi, Ghana
+                            </p>
+                            <p class="project-card__description">
+                                Eco-friendly residential development utilizing EPS foam technology 
+                                for improved insulation, durability, and cost efficiency. The project 
+                                features advanced thermal insulation systems that reduce energy costs.
+                            </p>
+                            <div class="project-card__details">
+                                <span class="project-card__detail">
+                                    <i class="fas fa-home"></i> Residential
+                                </span>
+                                <span class="project-card__detail">
+                                    <i class="fas fa-calendar"></i> 2024
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Architectural Shapes Projects -->
+                    <article class="project-card" data-category="infrastructure">
+                        <div class="project-card__image">
+                            <img src="assets/projects-images/Column-Encasement-1.jpg" 
+                                 alt="Architectural Column Encasement" 
+                                 loading="lazy">
+                            <div class="project-card__overlay">
+                                <span class="project-card__category">Architectural Shapes & Designs</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Premium Column Encasement</h3>
+                            <p class="project-card__location">
+                                <i class="fas fa-map-marker-alt"></i> Takoradi, Ghana
+                            </p>
+                            <p class="project-card__description">
+                                Elegant architectural column encasement providing both aesthetic appeal 
+                                and structural support with durable EPS solution. Features concrete-like 
+                                finish for premium appearance.
+                            </p>
+                            <div class="project-card__details">
+                                <span class="project-card__detail">
+                                    <i class="fas fa-building"></i> Architectural
+                                </span>
+                                <span class="project-card__detail">
+                                    <i class="fas fa-calendar"></i> 2024
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="infrastructure">
+                        <div class="project-card__image">
+                            <img src="assets/projects-images/Cornices.jpg" 
+                                 alt="Decorative Cornices Installation" 
+                                 loading="lazy">
+                            <div class="project-card__overlay">
+                                <span class="project-card__category">Architectural Shapes & Designs</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Decorative Cornices & Trim</h3>
+                            <p class="project-card__location">
+                                <i class="fas fa-map-marker-alt"></i> Tema, Ghana
+                            </p>
+                            <p class="project-card__description">
+                                Sophisticated cornice and trim installations adding architectural character 
+                                and refined elegance to residential and commercial properties. Premium finishes 
+                                with detailed craftsmanship.
+                            </p>
+                            <div class="project-card__details">
+                                <span class="project-card__detail">
+                                    <i class="fas fa-paint-brush"></i> Aesthetic
+                                </span>
+                                <span class="project-card__detail">
+                                    <i class="fas fa-calendar"></i> 2023
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- EcoPanel Projects -->
+                    <article class="project-card" data-category="commercial">
+                        <div class="project-card__image">
+                            <img src="assets/projects-images/Fanmilk.webp" 
+                                 alt="Fanmilk Facility Project" 
+                                 loading="lazy">
+                            <div class="project-card__overlay">
+                                <span class="project-card__category">Commercial</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Fanmilk Manufacturing Facility</h3>
+                            <p class="project-card__location">
+                                <i class="fas fa-map-marker-alt"></i> Central Region, Ghana
+                            </p>
+                            <p class="project-card__description">
+                                State-of-the-art manufacturing facility with climate-controlled EPS 
+                                insulation systems for optimal product preservation and efficiency. 
+                                Fast-track construction with EcoPanel technology.
+                            </p>
+                            <div class="project-card__details">
+                                <span class="project-card__detail">
+                                    <i class="fas fa-industry"></i> Commercial
+                                </span>
+                                <span class="project-card__detail">
+                                    <i class="fas fa-calendar"></i> 2023
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="commercial">
+                        <div class="project-card__image">
+                            <img src="assets/projects-images/Lipton.webp" 
+                                 alt="Lipton Distribution Center" 
+                                 loading="lazy">
+                            <div class="project-card__overlay">
+                                <span class="project-card__category">Commercial</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Lipton Distribution Center</h3>
+                            <p class="project-card__location">
+                                <i class="fas fa-map-marker-alt"></i> Accra, Ghana
+                            </p>
+                            <p class="project-card__description">
+                                Modern distribution center featuring advanced EPS insulation for temperature 
+                                control and warehouse optimization with sustainable design principles and 
+                                energy-efficient systems.
+                            </p>
+                            <div class="project-card__details">
+                                <span class="project-card__detail">
+                                    <i class="fas fa-warehouse"></i> Commercial
+                                </span>
+                                <span class="project-card__detail">
+                                    <i class="fas fa-calendar"></i> 2023
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="infrastructure">
+                        <div class="project-card__image">
+                            <img src="assets/projects-images/Pediment-1.webp" 
+                                 alt="Architectural Pediment Design" 
+                                 loading="lazy">
+                            <div class="project-card__overlay">
+                                <span class="project-card__category">Architectural Shapes & Designs</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Classical Pediment Design</h3>
+                            <p class="project-card__location">
+                                <i class="fas fa-map-marker-alt"></i> Cape Coast, Ghana
+                            </p>
+                            <p class="project-card__description">
+                                Classical architectural pediment featuring intricate EPS craftsmanship 
+                                for timeless elegance and superior durability. Premium finish with 
+                                meticulous attention to detail.
+                            </p>
+                            <div class="project-card__details">
+                                <span class="project-card__detail">
+                                    <i class="fas fa-crown"></i> Architectural
+                                </span>
+                                <span class="project-card__detail">
+                                    <i class="fas fa-calendar"></i> 2024
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="infrastructure">
+                        <div class="project-card__image">
+                            <img src="assets/projects-images/Wall-Treatment.webp" 
+                                 alt="Contemporary Wall Treatment" 
+                                 loading="lazy">
+                            <div class="project-card__overlay">
+                                <span class="project-card__category">Architectural Shapes & Designs</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Contemporary Wall Treatment</h3>
+                            <p class="project-card__location">
+                                <i class="fas fa-map-marker-alt"></i> Kumasi, Ghana
+                            </p>
+                            <p class="project-card__description">
+                                Modern 3D wall treatment installation combining architectural innovation 
+                                with sustainable EPS materials for stunning interior finishes. Custom design 
+                                reflecting contemporary aesthetics.
+                            </p>
+                            <div class="project-card__details">
+                                <span class="project-card__detail">
+                                    <i class="fas fa-wave-square"></i> Modern
+                                </span>
+                                <span class="project-card__detail">
+                                    <i class="fas fa-calendar"></i> 2024
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="projects-stats section section--gray">
+            <div class="container">
+                <div class="stats__grid">
+                    <div class="stat-card">
+                        <div class="stat-card__icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__number" data-count="500">0</span>+
+                            <span class="stat-card__label">Projects Completed</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__number" data-count="500">0</span>+
+                            <span class="stat-card__label">Satisfied Clients</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__number" data-count="25">0</span>+
+                            <span class="stat-card__label">Years of Experience</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__number" data-count="98">0</span>%
+                            <span class="stat-card__label">Client Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="projects-cta section section--dark">
+            <div class="container">
+                <h2 class="section__title section__title--light">Ready to Start Your Project?</h2>
+                <p class="section__description section__description--light">
+                    Join hundreds of satisfied clients who have transformed their visions into reality 
+                    with Ecoblock Construction. Let's build something great together.
+                </p>
+                <div class="cta__buttons">
+                    <a href="index.html#contact" class="btn btn--primary btn--lg">
+                        Get a Free Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__column">
+                    <h3 class="footer__title">Ecoblock Construction</h3>
+                    <p class="footer__description">
+                        Your trusted partner in innovative construction solutions and EPS foam products 
+                        across Ghana and beyond.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h4 class="footer__heading">Services</h4>
+                    <ul class="footer__list">
+                        <li><a href="service-eps-foam.html">EPS Foam</a></li>
+                        <li><a href="service-eco-panel.html">Eco Panel</a></li>
+                        <li><a href="service-architectural-shapes.html">Architectural Shapes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h4 class="footer__heading">Contact</h4>
+                    <ul class="footer__list">
+                        <li><i class="fas fa-map-marker-alt"></i> Ghana</li>
+                        <li><i class="fas fa-phone"></i> +233 XXX XXX XXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@ecoblock.gh</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2026 Ecoblock Construction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
