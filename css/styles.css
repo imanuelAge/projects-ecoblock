@@ -932,6 +932,68 @@ p + p {
     color: var(--color-gray-900);
 }
 
+/* Projects Carousel */
+.projects__carousel {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    position: relative;
+    margin-top: var(--spacing-8);
+}
+
+.carousel__viewport {
+    flex: 1;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+}
+
+.carousel__track {
+    display: flex;
+    gap: var(--spacing-6);
+    transition: transform var(--transition-base);
+}
+
+.carousel__track .project-card {
+    flex: 0 0 calc(50% - var(--spacing-3));
+    scroll-snap-align: start;
+}
+
+.carousel__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    font-size: var(--text-lg);
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.carousel__btn:hover {
+    background-color: var(--color-primary-dark);
+    transform: scale(1.1);
+}
+
+.carousel__btn:active {
+    transform: scale(0.95);
+}
+
+.carousel__btn--prev {
+    order: -1;
+}
+
+/* Projects CTA */
+.projects__cta {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-10);
+}
+
 .projects__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1713,8 +1775,33 @@ p + p {
         grid-template-columns: 1fr;
     }
 
+    /* Mobile Carousel Styles */
+    .carousel__track .project-card {
+        flex: 0 0 100%;
+    }
+
+    .carousel__btn {
+        width: 40px;
+        height: 40px;
+        font-size: var(--text-base);
+    }
+
     .cta__title {
         font-size: var(--text-2xl);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Tablet Carousel Styles */
+    .carousel__track .project-card {
+        flex: 0 0 calc(50% - var(--spacing-3));
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Desktop Carousel Styles */
+    .carousel__track .project-card {
+        flex: 0 0 calc(33.333% - var(--spacing-4));
     }
 }
 

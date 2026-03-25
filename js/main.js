@@ -276,8 +276,75 @@ class TestimonialsSlider {
 new TestimonialsSlider();
 
 // ===================================
-// Counter Animation
+// Projects Carousel
 // ===================================
+class ProjectsCarousel {
+    constructor() {
+        this.track = document.getElementById('projects-carousel-track');
+        this.prevBtn = document.getElementById('projects-carousel-prev');
+        this.nextBtn = document.getElementById('projects-carousel-next');
+        this.cards = this.track ? this.track.querySelectorAll('.project-card') : [];
+        
+        if (!this.track || this.cards.length === 0) return;
+        
+        this.currentIndex = 0;
+        this.cardsPerView = this.getCardsPerView();
+        this.init();
+    }
+    
+    getCardsPerView() {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 768) return 2;
+        return 1;
+    }
+    
+    init() {
+        this.updateCarousel();
+        this.bindEvents();
+    }
+    
+    updateCarousel() {
+        const cardWidth = this.cards[0].offsetWidth;
+        const gap = 24; // var(--spacing-6)
+        const offset = this.currentIndex * (cardWidth + gap);
+        this.track.style.transform = `translateX(-${offset}px)`;
+    }
+    
+    nextSlide() {
+        const maxIndex = Math.max(0, this.cards.length - this.cardsPerView);
+        this.currentIndex = Math.min(this.currentIndex + 1, maxIndex);
+        this.updateCarousel();
+    }
+    
+    prevSlide() {
+        this.currentIndex = Math.max(this.currentIndex - 1, 0);
+        this.updateCarousel();
+    }
+    
+    bindEvents() {
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', () => this.prevSlide());
+        }
+        
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', () => this.nextSlide());
+        }
+        
+        // Recalculate on resize
+        window.addEventListener('resize', () => {
+            this.cardsPerView = this.getCardsPerView();
+            this.currentIndex = 0;
+            this.updateCarousel();
+        });
+    }
+}
+
+// Initialize projects carousel
+new ProjectsCarousel();
+
+// ===================================
+// Counter Animation
+// ====================================
 function animateCounter(element) {
     const target = parseInt(element.getAttribute('data-count'));
     const duration = 2000;
