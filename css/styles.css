@@ -409,8 +409,8 @@ input, textarea, select {
 }
 
 .nav__logo-img {
-    width: 67.5px;
-    height: 67.5px;
+    width: 55px;
+    height: 55px;
 }
 
 .nav__logo-text {
@@ -554,6 +554,16 @@ input, textarea, select {
     color: var(--color-white);
 }
 
+.hero--service {
+    min-height: 50vh;
+}
+
+@media (max-width: 768px) {
+    .hero--service {
+        min-height: 40vh;
+    }
+}
+
 .hero__overlay {
     position: absolute;
     top: 0;
@@ -678,7 +688,7 @@ input, textarea, select {
     margin-bottom: var(--spacing-4);
 }
 p + p {
-    margin-top: 20px; /* Adjust the space as needed */
+    margin-top: var(--spacing-5);
 }
 
 
@@ -2084,6 +2094,11 @@ p + p {
     transform: scaleX(1);
 }
 
+.benefit-item:hover .benefit-item__number {
+    opacity: 0.2;
+    transform: scale(1.1);
+}
+
 .benefit-item__number {
     font-size: var(--text-5xl);
     font-weight: var(--font-extrabold);
@@ -2092,6 +2107,8 @@ p + p {
     position: absolute;
     top: 20px;
     right: 30px;
+    transition: all var(--transition-base);
+    pointer-events: none;
     line-height: 1;
 }
 
@@ -2162,9 +2179,7 @@ p + p {
     }
 
     .benefit-item {
-        grid-template-columns: 60px 1fr;
-        gap: var(--spacing-4);
-        padding: var(--spacing-4);
+        padding: var(--spacing-8) var(--spacing-6);
     }
 
     .overview-card,
