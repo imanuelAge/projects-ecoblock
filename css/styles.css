@@ -1006,8 +1006,9 @@ p + p {
 
 .projects__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-6);
+    width: 100%;
 }
 
 .project-card {
@@ -1016,6 +1017,9 @@ p + p {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -1029,15 +1033,19 @@ p + p {
 
 .project-card__image {
     position: relative;
-    height: 250px;
+    width: 100%;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .project-card__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform var(--transition-slow);
+    display: block;
 }
 
 .project-card:hover .project-card__image img {
@@ -1803,6 +1811,22 @@ p + p {
         grid-template-columns: 1fr;
     }
 
+    .project-card__image {
+        aspect-ratio: 16 / 9;
+    }
+
+    .project-card__title {
+        font-size: var(--text-lg);
+    }
+
+    .project-card__content {
+        padding: var(--spacing-4);
+    }
+
+    .project-card__description {
+        font-size: var(--text-xs);
+    }
+
     /* Mobile Carousel Styles */
     .carousel__track .project-card {
         flex: 0 0 100%;
@@ -1834,6 +1858,46 @@ p + p {
 }
 
 @media (max-width: 480px) {
+    .projects__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-4);
+    }
+
+    .project-card {
+        border-radius: var(--radius-lg);
+    }
+
+    .project-card__image {
+        aspect-ratio: 16 / 10;
+    }
+
+    .project-card__title {
+        font-size: var(--text-base);
+        margin-bottom: var(--spacing-2);
+    }
+
+    .project-card__content {
+        padding: var(--spacing-3);
+        gap: var(--spacing-1);
+    }
+
+    .project-card__location {
+        font-size: var(--text-xs);
+        margin-bottom: var(--spacing-2);
+    }
+
+    .project-card__description {
+        font-size: var(--text-xs);
+        line-height: 1.5;
+        margin-bottom: var(--spacing-2);
+    }
+
+    .project-card__details {
+        gap: var(--spacing-2);
+        font-size: var(--text-xs);
+        padding-top: var(--spacing-2);
+    }
+
     .hero__buttons {
         flex-direction: column;
     }
@@ -1848,6 +1912,115 @@ p + p {
 
     .cta__buttons .btn {
         width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .projects__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-5);
+    }
+
+    .project-card__image {
+        aspect-ratio: 16 / 9;
+    }
+
+    .project-card__title {
+        font-size: var(--text-lg);
+    }
+
+    .project-card__content {
+        padding: var(--spacing-4);
+    }
+
+    .project-card__description {
+        font-size: var(--text-sm);
+        line-height: 1.6;
+    }
+
+    .project-card__details {
+        gap: var(--spacing-3);
+        font-size: var(--text-xs);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .projects__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-6);
+    }
+
+    .project-card__image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .project-card__title {
+        font-size: var(--text-xl);
+    }
+
+    .project-card__content {
+        padding: var(--spacing-5);
+    }
+
+    .project-card__description {
+        font-size: var(--text-sm);
+        line-height: 1.7;
+    }
+
+    /* Tablet Carousel Styles */
+    .carousel__track .project-card {
+        flex: 0 0 calc(50% - var(--spacing-3));
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-6);
+    }
+
+    .project-card__image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .project-card__title {
+        font-size: var(--text-xl);
+    }
+
+    .project-card__content {
+        padding: var(--spacing-6);
+    }
+
+    .project-card__description {
+        font-size: var(--text-sm);
+        line-height: 1.7;
+    }
+
+    /* Desktop Carousel Styles */
+    .carousel__track .project-card {
+        flex: 0 0 calc(33.333% - var(--spacing-4));
+    }
+}
+
+@media (min-width: 1280px) {
+    .projects__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-7);
+    }
+
+    .project-card__image {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (min-width: 1536px) {
+    .projects__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing-8);
+    }
+
+    .project-card__image {
+        aspect-ratio: 4 / 3;
     }
 }
 
