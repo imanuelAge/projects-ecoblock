@@ -2342,7 +2342,7 @@ p + p {
 
 .benefits__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-6);
     margin-top: var(--spacing-12);
 }
@@ -2350,6 +2350,11 @@ p + p {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .applications__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-6);
+    }
+
+    .benefits__list {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-6);
     }
