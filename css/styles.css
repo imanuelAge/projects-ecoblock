@@ -2513,7 +2513,8 @@ p + p {
     font-size: var(--text-3xl);
     font-weight: var(--font-extrabold);
     color: var(--color-primary);
-    line-height: 1;
+    line-height: 1.2;
+    display: block;
 }
 
 .stat-card__label {
