@@ -379,11 +379,13 @@ const counterObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.5 });
 
-// Observe hero stats and why-us section
+// Observe hero stats, projects stats, and why-us section
 const heroStats = document.querySelector('.hero__stats');
+const projectsStats = document.querySelector('.projects-stats');
 const whyUsSection = document.querySelector('.why-us__grid');
 
 if (heroStats) counterObserver.observe(heroStats);
+if (projectsStats) counterObserver.observe(projectsStats);
 if (whyUsSection) counterObserver.observe(whyUsSection);
 
 // ===================================
