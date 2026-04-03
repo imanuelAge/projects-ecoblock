@@ -2335,7 +2335,7 @@ p + p {
 
 .applications__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-6);
     margin-top: var(--spacing-12);
 }
@@ -2348,6 +2348,13 @@ p + p {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .applications__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-6);
+    }
+}
+
 @media (max-width: 768px) {
     .service-overview__grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
