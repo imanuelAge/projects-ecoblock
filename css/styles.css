@@ -1817,7 +1817,7 @@ p + p {
     }
 
     .project-card__image {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 4 / 3;
     }
 
     .project-card__title {
@@ -1873,7 +1873,7 @@ p + p {
     }
 
     .project-card__image {
-        aspect-ratio: 16 / 10;
+        aspect-ratio: 4 / 3;
     }
 
     .project-card__title {
@@ -1927,7 +1927,7 @@ p + p {
     }
 
     .project-card__image {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 4 / 3;
     }
 
     .project-card__title {
