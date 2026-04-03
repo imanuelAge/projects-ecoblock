@@ -1042,7 +1042,6 @@ p + p {
     aspect-ratio: 4 / 3;
     overflow: hidden;
     flex-shrink: 0;
-    max-height: 250px;
 }
 
 .project-card__image img {
@@ -1875,7 +1874,6 @@ p + p {
 
     .project-card__image {
         aspect-ratio: 4 / 3;
-        max-height: 200px;
     }
 
     .project-card__title {
@@ -1931,8 +1929,7 @@ p + p {
     .project-card__image {
         aspect-ratio: 4 / 3;
         max-height: 220px;
-    }
-
+    
     .project-card__title {
         font-size: var(--text-lg);
     }
@@ -1961,8 +1958,7 @@ p + p {
     .project-card__image {
         aspect-ratio: 4 / 3;
         max-height: 240px;
-    }
-
+    
     .project-card__title {
         font-size: var(--text-xl);
     }
@@ -1989,7 +1985,6 @@ p + p {
     }
 
     .project-card__image {
-        max-height: 220px;
         aspect-ratio: 4 / 3;
     }
 
