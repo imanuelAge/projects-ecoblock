@@ -11,6 +11,7 @@
     --color-primary: #e57200;
     --color-primary-dark: #d97706;
     --color-primary-light: #fbbf24;
+    --color-primary-very-light: #fff8f1;
     
     /* Secondary Colors */
     --color-secondary: #0c2269;
@@ -36,6 +37,7 @@
     --color-warning: #f59e0b;
     --color-error: #ef4444;
     --color-info: #3b82f6;
+    --color-eco-green: #10b981;
     
     /* Typography */
     --font-heading: 'Montserrat', sans-serif;
@@ -198,6 +200,14 @@ input, textarea, select {
     color: var(--color-primary);
 }
 
+.highlight-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: var(--font-extrabold);
+}
+
 .section {
     padding: var(--spacing-20) 0;
 }
@@ -208,6 +218,11 @@ input, textarea, select {
 
 .section--dark {
     background-color: var(--color-secondary-dark);
+    color: var(--color-white);
+}
+
+.section--dark-gradient {
+    background: linear-gradient(135deg, var(--color-secondary-dark) 0%, var(--color-secondary) 100%);
     color: var(--color-white);
 }
 
@@ -236,11 +251,22 @@ input, textarea, select {
 .section__title {
     font-size: var(--text-4xl);
     margin-bottom: var(--spacing-4);
+    line-height: 1.2;
+}
+
+.section__title .highlight {
+    display: inline;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: var(--font-extrabold);
 }
 
 .section__description {
     font-size: var(--text-lg);
     color: var(--color-gray-600);
+    line-height: 1.8;
 }
 
 /* Animations */
@@ -298,6 +324,47 @@ input, textarea, select {
     50% { transform: translateY(-10px); }
 }
 
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(229, 114, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(229, 114, 0, 0.5);
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* ===================================
    Button Styles
    =================================== */
@@ -327,8 +394,8 @@ input, textarea, select {
     background-color: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
     color: var(--color-white);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(229, 114, 0, 0.35);
 }
 
 .btn--outline {
@@ -572,9 +639,9 @@ input, textarea, select {
     height: 100%;
     background: linear-gradient(
         135deg,
-        rgba(15, 39, 68, 0.9) 0%,
-        rgba(30, 58, 95, 0.8) 50%,
-        rgba(15, 39, 68, 0.9) 100%
+        rgba(15, 39, 68, 0.92) 0%,
+        rgba(30, 58, 95, 0.85) 50%,
+        rgba(15, 39, 68, 0.92) 100%
     );
 }
 
@@ -1333,8 +1400,8 @@ p + p {
     height: 100%;
     background: linear-gradient(
         135deg,
-        rgba(245, 158, 11, 0.9) 0%,
-        rgba(217, 119, 6, 0.9) 100%
+        rgba(245, 158, 11, 0.92) 0%,
+        rgba(217, 119, 6, 0.92) 100%
     );
 }
 
@@ -1776,6 +1843,47 @@ p + p {
     transform: translateY(0);
 }
 
+/* Stagger animations for service cards */
+.service-overview__grid .overview-card,
+.products__grid .product-card,
+.applications__grid .application-item,
+.benefits__list .benefit-item,
+.metrics__grid .metric-card {
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+/* Stagger delays */
+.service-overview__grid .overview-card:nth-child(1) { animation-delay: 0.1s; }
+.service-overview__grid .overview-card:nth-child(2) { animation-delay: 0.2s; }
+.service-overview__grid .overview-card:nth-child(3) { animation-delay: 0.3s; }
+.service-overview__grid .overview-card:nth-child(4) { animation-delay: 0.4s; }
+.service-overview__grid .overview-card:nth-child(5) { animation-delay: 0.5s; }
+.service-overview__grid .overview-card:nth-child(6) { animation-delay: 0.6s; }
+
+.products__grid .product-card:nth-child(1) { animation-delay: 0.1s; }
+.products__grid .product-card:nth-child(2) { animation-delay: 0.25s; }
+.products__grid .product-card:nth-child(3) { animation-delay: 0.4s; }
+
+.applications__grid .application-item:nth-child(1) { animation-delay: 0.1s; }
+.applications__grid .application-item:nth-child(2) { animation-delay: 0.2s; }
+.applications__grid .application-item:nth-child(3) { animation-delay: 0.3s; }
+.applications__grid .application-item:nth-child(4) { animation-delay: 0.4s; }
+.applications__grid .application-item:nth-child(5) { animation-delay: 0.5s; }
+.applications__grid .application-item:nth-child(6) { animation-delay: 0.6s; }
+
+.benefits__list .benefit-item:nth-child(1) { animation-delay: 0.1s; }
+.benefits__list .benefit-item:nth-child(2) { animation-delay: 0.2s; }
+.benefits__list .benefit-item:nth-child(3) { animation-delay: 0.3s; }
+.benefits__list .benefit-item:nth-child(4) { animation-delay: 0.4s; }
+.benefits__list .benefit-item:nth-child(5) { animation-delay: 0.5s; }
+.benefits__list .benefit-item:nth-child(6) { animation-delay: 0.6s; }
+
+.metrics__grid .metric-card:nth-child(1) { animation-delay: 0.1s; }
+.metrics__grid .metric-card:nth-child(2) { animation-delay: 0.2s; }
+.metrics__grid .metric-card:nth-child(3) { animation-delay: 0.3s; }
+.metrics__grid .metric-card:nth-child(4) { animation-delay: 0.4s; }
+
 /* ===================================
    Responsive Adjustments
    =================================== */
@@ -2030,14 +2138,14 @@ p + p {
 /* Overview Cards */
 .overview-card {
     background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
-    border: 1px solid #e5e7eb;
+    border: 1.5px solid #e5e7eb;
     border-radius: var(--radius-2xl);
     padding: var(--spacing-8);
     text-align: center;
     transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .overview-card::before {
@@ -2052,15 +2160,34 @@ p + p {
     transition: transform var(--transition-base);
 }
 
+.overview-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(229, 114, 0, 0.08) 0%, transparent 70%);
+    opacity: 0;
+    transition: all var(--transition-slow);
+    border-radius: 50%;
+}
+
 .overview-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(229, 114, 0, 0.15), 0 0 40px rgba(229, 114, 0, 0.1);
     background: linear-gradient(135deg, #fff8f1 0%, #fffbf5 100%);
     border-color: var(--color-primary);
 }
 
 .overview-card:hover::before {
     transform: scaleX(1);
+}
+
+.overview-card:hover::after {
+    opacity: 1;
+    top: -25%;
+    right: -25%;
 }
 
 .overview-card__icon {
@@ -2098,8 +2225,8 @@ p + p {
     transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1.5px solid #e5e7eb;
 }
 
 .product-card::after {
@@ -2115,8 +2242,8 @@ p + p {
 }
 
 .product-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-14px) scale(1.02);
+    box-shadow: 0 24px 48px rgba(229, 114, 0, 0.18), 0 0 50px rgba(229, 114, 0, 0.12);
     border-color: var(--color-primary);
     background: linear-gradient(135deg, #fff8f1 0%, #fffbf5 100%);
 }
@@ -2138,7 +2265,13 @@ p + p {
     font-size: 36px;
     color: var(--color-white);
     margin-bottom: var(--spacing-6);
-    box-shadow: 0 8px 16px rgba(12, 34, 105, 0.25);
+    box-shadow: 0 12px 24px rgba(12, 34, 105, 0.35);
+    transition: all var(--transition-base);
+}
+
+.product-card:hover .product-card__icon {
+    transform: scale(1.12) rotate(5deg);
+    box-shadow: 0 16px 32px rgba(12, 34, 105, 0.45);
 }
 
 .product-card__title {
@@ -2177,9 +2310,25 @@ p + p {
     min-width: 20px;
 }
 
+/* Service Overview Enhancement */
+.service-overview__content {
+    margin-bottom: var(--spacing-12);
+}
+
+.service-overview__content .section__title {
+    margin-bottom: var(--spacing-6);
+}
+
+.service-overview__text {
+    color: var(--color-gray-600);
+    line-height: 1.8;
+    font-size: var(--text-base);
+    margin-bottom: var(--spacing-5);
+}
+
 /* Application Items */
 .application-item {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(249, 250, 251, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 250, 251, 0.95) 100%);
     border: 2px solid transparent;
     border-radius: var(--radius-2xl);
     padding: var(--spacing-6);
@@ -2187,7 +2336,7 @@ p + p {
     transition: all var(--transition-base);
     position: relative;
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
 }
 
 .application-item::before {
@@ -2197,7 +2346,7 @@ p + p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(229, 114, 0, 0.05) 0%, rgba(12, 34, 105, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(229, 114, 0, 0.08) 0%, rgba(12, 34, 105, 0.08) 100%);
     border-radius: var(--radius-2xl);
     opacity: 0;
     transition: opacity var(--transition-base);
@@ -2206,9 +2355,9 @@ p + p {
 }
 
 .application-item:hover {
-    transform: translateY(-6px);
+    transform: translateY(-10px);
     border-color: var(--color-primary);
-    box-shadow: 0 16px 48px rgba(229, 114, 0, 0.2);
+    box-shadow: 0 20px 50px rgba(229, 114, 0, 0.25), 0 0 30px rgba(229, 114, 0, 0.1);
 }
 
 .application-item:hover::before {
@@ -2226,13 +2375,13 @@ p + p {
     margin: 0 auto var(--spacing-4) auto;
     font-size: 28px;
     color: var(--color-white);
-    box-shadow: 0 6px 20px rgba(229, 114, 0, 0.35);
+    box-shadow: 0 10px 28px rgba(229, 114, 0, 0.4);
     transition: all var(--transition-base);
 }
 
 .application-item:hover .application-item__icon {
-    transform: rotate(-10deg) scale(1.1);
-    box-shadow: 0 8px 24px rgba(229, 114, 0, 0.4);
+    transform: rotate(15deg) scale(1.15);
+    box-shadow: 0 14px 36px rgba(229, 114, 0, 0.5);
 }
 
 .application-item h3 {
@@ -2251,14 +2400,14 @@ p + p {
 /* Benefit Items */
 .benefit-item {
     background: var(--color-white);
-    border: 1px solid var(--color-gray-100);
+    border: 1.5px solid var(--color-gray-100);
     border-radius: var(--radius-2xl);
     padding: var(--spacing-10) var(--spacing-8);
     transition: all var(--transition-base);
     display: flex;
     flex-direction: column;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
 }
 
 .benefit-item::after {
@@ -2268,15 +2417,16 @@ p + p {
     left: 0;
     width: 100%;
     height: 4px;
-    background: var(--color-primary);
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
     transform: scaleX(0);
     transition: transform var(--transition-base);
     transform-origin: left;
+    border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
 }
 
 .benefit-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-16px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12), 0 0 40px rgba(229, 114, 0, 0.08);
     border-color: var(--color-primary-light);
 }
 
@@ -2285,8 +2435,8 @@ p + p {
 }
 
 .benefit-item:hover .benefit-item__number {
-    opacity: 0.2;
-    transform: scale(1.1);
+    opacity: 0.15;
+    transform: scale(1.15);
 }
 
 .benefit-item__number {
@@ -2638,20 +2788,21 @@ p + p {
 }
 
 .metric-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
     padding: var(--spacing-8);
     border-radius: var(--radius-xl);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
     text-align: center;
     transition: all var(--transition-base);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .metric-card:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.18);
     border-color: var(--color-primary);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(229, 114, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(229, 114, 0, 0.25), 0 0 30px rgba(229, 114, 0, 0.1);
 }
 
 .metric-card__value {
