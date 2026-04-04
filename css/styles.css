@@ -2478,7 +2478,7 @@ p + p {
 /* Grid Layouts */
 .service-overview__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-6);
     margin-top: var(--spacing-12);
 }
@@ -2526,7 +2526,7 @@ p + p {
 /* Tablet Breakpoint */
 @media (min-width: 768px) and (max-width: 1023px) {
     .service-overview__grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: var(--spacing-5);
     }
 
@@ -2591,7 +2591,7 @@ p + p {
 /* Small Tablet Breakpoint */
 @media (max-width: 767px) {
     .service-overview__grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-4);
     }
 
