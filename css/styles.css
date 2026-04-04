@@ -1844,45 +1844,35 @@ p + p {
 }
 
 /* Stagger animations for service cards */
-.service-overview__grid .overview-card,
-.products__grid .product-card,
-.applications__grid .application-item,
-.benefits__list .benefit-item,
-.metrics__grid .metric-card {
-    animation: fadeUp 0.8s ease-out forwards;
-    opacity: 0;
-}
+.service-overview__grid .overview-card:nth-child(1) { transition-delay: 0s; }
+.service-overview__grid .overview-card:nth-child(2) { transition-delay: 0.1s; }
+.service-overview__grid .overview-card:nth-child(3) { transition-delay: 0.2s; }
+.service-overview__grid .overview-card:nth-child(4) { transition-delay: 0.3s; }
+.service-overview__grid .overview-card:nth-child(5) { transition-delay: 0.4s; }
+.service-overview__grid .overview-card:nth-child(6) { transition-delay: 0.5s; }
 
-/* Stagger delays */
-.service-overview__grid .overview-card:nth-child(1) { animation-delay: 0.1s; }
-.service-overview__grid .overview-card:nth-child(2) { animation-delay: 0.2s; }
-.service-overview__grid .overview-card:nth-child(3) { animation-delay: 0.3s; }
-.service-overview__grid .overview-card:nth-child(4) { animation-delay: 0.4s; }
-.service-overview__grid .overview-card:nth-child(5) { animation-delay: 0.5s; }
-.service-overview__grid .overview-card:nth-child(6) { animation-delay: 0.6s; }
+.products__grid .product-card:nth-child(1) { transition-delay: 0s; }
+.products__grid .product-card:nth-child(2) { transition-delay: 0.1s; }
+.products__grid .product-card:nth-child(3) { transition-delay: 0.2s; }
 
-.products__grid .product-card:nth-child(1) { animation-delay: 0.1s; }
-.products__grid .product-card:nth-child(2) { animation-delay: 0.25s; }
-.products__grid .product-card:nth-child(3) { animation-delay: 0.4s; }
+.applications__grid .application-item:nth-child(1) { transition-delay: 0s; }
+.applications__grid .application-item:nth-child(2) { transition-delay: 0.1s; }
+.applications__grid .application-item:nth-child(3) { transition-delay: 0.2s; }
+.applications__grid .application-item:nth-child(4) { transition-delay: 0.3s; }
+.applications__grid .application-item:nth-child(5) { transition-delay: 0.4s; }
+.applications__grid .application-item:nth-child(6) { transition-delay: 0.5s; }
 
-.applications__grid .application-item:nth-child(1) { animation-delay: 0.1s; }
-.applications__grid .application-item:nth-child(2) { animation-delay: 0.2s; }
-.applications__grid .application-item:nth-child(3) { animation-delay: 0.3s; }
-.applications__grid .application-item:nth-child(4) { animation-delay: 0.4s; }
-.applications__grid .application-item:nth-child(5) { animation-delay: 0.5s; }
-.applications__grid .application-item:nth-child(6) { animation-delay: 0.6s; }
+.benefits__list .benefit-item:nth-child(1) { transition-delay: 0s; }
+.benefits__list .benefit-item:nth-child(2) { transition-delay: 0.1s; }
+.benefits__list .benefit-item:nth-child(3) { transition-delay: 0.2s; }
+.benefits__list .benefit-item:nth-child(4) { transition-delay: 0.3s; }
+.benefits__list .benefit-item:nth-child(5) { transition-delay: 0.4s; }
+.benefits__list .benefit-item:nth-child(6) { transition-delay: 0.5s; }
 
-.benefits__list .benefit-item:nth-child(1) { animation-delay: 0.1s; }
-.benefits__list .benefit-item:nth-child(2) { animation-delay: 0.2s; }
-.benefits__list .benefit-item:nth-child(3) { animation-delay: 0.3s; }
-.benefits__list .benefit-item:nth-child(4) { animation-delay: 0.4s; }
-.benefits__list .benefit-item:nth-child(5) { animation-delay: 0.5s; }
-.benefits__list .benefit-item:nth-child(6) { animation-delay: 0.6s; }
-
-.metrics__grid .metric-card:nth-child(1) { animation-delay: 0.1s; }
-.metrics__grid .metric-card:nth-child(2) { animation-delay: 0.2s; }
-.metrics__grid .metric-card:nth-child(3) { animation-delay: 0.3s; }
-.metrics__grid .metric-card:nth-child(4) { animation-delay: 0.4s; }
+.metrics__grid .metric-card:nth-child(1) { transition-delay: 0s; }
+.metrics__grid .metric-card:nth-child(2) { transition-delay: 0.1s; }
+.metrics__grid .metric-card:nth-child(3) { transition-delay: 0.2s; }
+.metrics__grid .metric-card:nth-child(4) { transition-delay: 0.3s; }
 
 /* ===================================
    Responsive Adjustments
@@ -2066,6 +2056,7 @@ p + p {
     .project-card__image {
         aspect-ratio: 4 / 3;
         max-height: 240px;
+    }
     
     .project-card__title {
         font-size: var(--text-xl);
@@ -2142,10 +2133,14 @@ p + p {
     border-radius: var(--radius-2xl);
     padding: var(--spacing-8);
     text-align: center;
-    transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.overview-card:not(.scroll-animate),
+.overview-card.scroll-animate.animated {
+    transition: all var(--transition-base);
 }
 
 .overview-card::before {
@@ -2222,11 +2217,15 @@ p + p {
     background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
     border-radius: var(--radius-2xl);
     padding: var(--spacing-8);
-    transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     border: 1.5px solid #e5e7eb;
+}
+
+.product-card:not(.scroll-animate),
+.product-card.scroll-animate.animated {
+    transition: all var(--transition-base);
 }
 
 .product-card::after {
@@ -2333,10 +2332,14 @@ p + p {
     border-radius: var(--radius-2xl);
     padding: var(--spacing-6);
     text-align: center;
-    transition: all var(--transition-base);
     position: relative;
     backdrop-filter: blur(10px);
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+}
+
+.application-item:not(.scroll-animate),
+.application-item.scroll-animate.animated {
+    transition: all var(--transition-base);
 }
 
 .application-item::before {
@@ -2403,11 +2406,15 @@ p + p {
     border: 1.5px solid var(--color-gray-100);
     border-radius: var(--radius-2xl);
     padding: var(--spacing-10) var(--spacing-8);
-    transition: all var(--transition-base);
     display: flex;
     flex-direction: column;
     position: relative;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+.benefit-item:not(.scroll-animate),
+.benefit-item.scroll-animate.animated {
+    transition: all var(--transition-base);
 }
 
 .benefit-item::after {
@@ -2794,8 +2801,12 @@ p + p {
     border-radius: var(--radius-xl);
     border: 1.5px solid rgba(255, 255, 255, 0.25);
     text-align: center;
-    transition: all var(--transition-base);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.metric-card:not(.scroll-animate),
+.metric-card.scroll-animate.animated {
+    transition: all var(--transition-base);
 }
 
 .metric-card:hover {

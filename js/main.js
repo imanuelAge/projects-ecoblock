@@ -393,7 +393,7 @@ if (whyUsSection) counterObserver.observe(whyUsSection);
 // ===================================
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll(
-        '.service-card, .project-card, .why-us__card, .about__value, .contact__card'
+        '.service-card, .project-card, .why-us__card, .about__value, .contact__card, .overview-card, .product-card, .application-item, .benefit-item, .metric-card'
     );
     
     animatedElements.forEach(el => {
