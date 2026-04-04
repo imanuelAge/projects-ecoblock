@@ -2505,7 +2505,8 @@ p + p {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+/* Desktop Breakpoints */
+@media (max-width: 1279px) {
     .applications__grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-6);
@@ -2515,9 +2516,80 @@ p + p {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-6);
     }
+
+    .metrics__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-7);
+    }
 }
 
-@media (max-width: 768px) {
+/* Tablet Breakpoint */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .service-overview__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-5);
+    }
+
+    .products__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-6);
+    }
+
+    .applications__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-4);
+    }
+
+    .benefits__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-5);
+        padding: var(--spacing-8);
+    }
+
+    .benefit-item {
+        padding: var(--spacing-8) var(--spacing-6);
+    }
+
+    .metrics__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-6);
+    }
+
+    .overview-card,
+    .product-card {
+        padding: var(--spacing-6);
+    }
+
+    .product-card__icon,
+    .overview-card__icon {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    .overview-card h3 {
+        font-size: var(--text-base);
+    }
+
+    .benefit-item__title {
+        font-size: var(--text-base);
+    }
+
+    .benefit-item__description {
+        font-size: var(--text-sm);
+    }
+
+    .metric-card__value {
+        font-size: var(--text-4xl);
+    }
+
+    .metric-card__label {
+        font-size: var(--text-base);
+    }
+}
+
+/* Small Tablet Breakpoint */
+@media (max-width: 767px) {
     .service-overview__grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: var(--spacing-4);
@@ -2534,26 +2606,82 @@ p + p {
     }
 
     .benefits__list {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-5);
         padding: var(--spacing-6);
     }
 
     .benefit-item {
-        padding: var(--spacing-8) var(--spacing-6);
+        padding: var(--spacing-6) var(--spacing-5);
+    }
+
+    .benefit-item__title {
+        font-size: var(--text-base);
+    }
+
+    .benefit-item__description {
+        font-size: var(--text-sm);
+    }
+
+    .benefit-item__number {
+        font-size: var(--text-4xl);
     }
 
     .overview-card,
     .product-card {
         padding: var(--spacing-6);
     }
+
+    .product-card__icon,
+    .overview-card__icon {
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+    }
+
+    .overview-card h3 {
+        font-size: var(--text-base);
+    }
 }
 
+/* Mobile Breakpoint */
 @media (max-width: 480px) {
     .service-overview__grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-3);
+    }
+
+    .products__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-4);
     }
 
     .applications__grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-3);
+    }
+
+    .benefits__list {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-4);
+        padding: var(--spacing-4);
+    }
+
+    .benefit-item {
+        padding: var(--spacing-4) var(--spacing-3);
+    }
+
+    .benefit-item__title {
+        font-size: var(--text-base);
+    }
+
+    .benefit-item__description {
+        font-size: var(--text-xs);
+    }
+
+    .benefit-item__number {
+        font-size: var(--text-2xl);
+        right: 15px;
     }
 
     .overview-card,
@@ -2564,13 +2692,34 @@ p + p {
 
     .product-card__icon,
     .overview-card__icon {
-        width: 56px;
-        height: 56px;
-        font-size: 28px;
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
     }
 
-    .benefit-item__number {
+    .overview-card h3 {
+        font-size: var(--text-sm);
+    }
+
+    .application-item h3 {
+        font-size: var(--text-sm);
+    }
+
+    .metrics__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-4);
+    }
+
+    .metric-card {
+        padding: var(--spacing-4);
+    }
+
+    .metric-card__value {
         font-size: var(--text-2xl);
+    }
+
+    .metric-card__label {
+        font-size: var(--text-sm);
     }
 }
 
@@ -2960,28 +3109,6 @@ p + p {
     .hero__cta {
         gap: var(--spacing-3);
     }
-
-    .metrics__grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-6);
-    }
-
-    .metric-card {
-        padding: var(--spacing-6);
-    }
-
-    .metric-card__value {
-        font-size: var(--text-4xl);
-    }
-
-    .products__showcase {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-6);
-    }
-
-    .service-metrics .section__title {
-        font-size: var(--text-3xl);
-    }
 }
 
 @media (max-width: 480px) {
@@ -2994,23 +3121,6 @@ p + p {
         display: grid;
         grid-template-columns: 1fr;
         gap: var(--spacing-3);
-    }
-
-    .metrics__grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-4);
-    }
-
-    .metric-card {
-        padding: var(--spacing-4);
-    }
-
-    .metric-card__value {
-        font-size: var(--text-3xl);
-    }
-
-    .metric-card__label {
-        font-size: var(--text-base);
     }
 
     .comparison-table {

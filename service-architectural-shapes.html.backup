@@ -497,6 +497,245 @@
             </div>
         </div>
     </footer>
+
+        <!-- Design Categories Section -->
+        <section class="service-products section section--gray">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Our Design <span class="highlight">Categories</span></h2>
+                    <p class="section__description">
+                        We offer comprehensive architectural solutions across five specialized design categories.
+                    </p>
+                </div>
+
+                <div class="products__grid">
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <img src="assets/images/ba-1.webp" alt="Building Aesthetics" loading="lazy">
+                        </div>
+                        <h3 class="product-card__title">Building Aesthetics</h3>
+                        <p class="product-card__description">
+                            Transform your buildings with stunning decorative elements including:
+                        </p>
+                        <ul class="product-card__features">
+                            <li><i class="fas fa-check"></i> Cornices and trims</li>
+                            <li><i class="fas fa-check"></i> Column covers and capitals</li>
+                            <li><i class="fas fa-check"></i> Wall treatments and panels</li>
+                            <li><i class="fas fa-check"></i> Pediments and entablatures</li>
+                        </ul>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <img src="assets/images/monum-1.webp" alt="Monuments and Sculptures" loading="lazy">
+                        </div>
+                        <h3 class="product-card__title">Monuments & Sculptures</h3>
+                        <p class="product-card__description">
+                            Create lasting impressions with impressive monumental designs:
+                        </p>
+                        <ul class="product-card__features">
+                            <li><i class="fas fa-check"></i> Custom sculptures</li>
+                            <li><i class="fas fa-check"></i> Memorial structures</li>
+                            <li><i class="fas fa-check"></i> Architectural installations</li>
+                            <li><i class="fas fa-check"></i> Landmark designs</li>
+                        </ul>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <img src="assets/images/Brackets.jpg" alt="Signage and Lettering" loading="lazy">
+                        </div>
+                        <h3 class="product-card__title">Signage & Lettering</h3>
+                        <p class="product-card__description">
+                            Professional signage solutions for commercial visibility:
+                        </p>
+                        <ul class="product-card__features">
+                            <li><i class="fas fa-check"></i> Building signage</li>
+                            <li><i class="fas fa-check"></i> Custom lettering</li>
+                            <li><i class="fas fa-check"></i> Logo displays</li>
+                            <li><i class="fas fa-check"></i> Wayfinding systems</li>
+                        </ul>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <img src="assets/images/events-1.webp" alt="Event Displays" loading="lazy">
+                        </div>
+                        <h3 class="product-card__title">Product Replicas</h3>
+                        <p class="product-card__description">
+                            Impressive product representations for marketing and display:
+                        </p>
+                        <ul class="product-card__features">
+                            <li><i class="fas fa-check"></i> Oversized product models</li>
+                            <li><i class="fas fa-check"></i> Display installations</li>
+                            <li><i class="fas fa-check"></i> Marketing displays</li>
+                            <li><i class="fas fa-check"></i> Trade show features</li>
+                        </ul>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <img src="assets/images/Events-2.webp" alt="Event Decorations" loading="lazy">
+                        </div>
+                        <h3 class="product-card__title">Event Decorations</h3>
+                        <p class="product-card__description">
+                            Memorable event experiences with custom architectural designs:
+                        </p>
+                        <ul class="product-card__features">
+                            <li><i class="fas fa-check"></i> Stage backgrounds</li>
+                            <li><i class="fas fa-check"></i> Entrance installations</li>
+                            <li><i class="fas fa-check"></i> Banner structures</li>
+                            <li><i class="fas fa-check"></i> Themed decorations</li>
+                        </ul>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <img src="assets/images/Window-Molding.webp" alt="Mouldings and Trims" loading="lazy">
+                        </div>
+                        <h3 class="product-card__title">Mouldings & Trims</h3>
+                        <p class="product-card__description">
+                            Sophisticated finishing touches for refined architectural details:
+                        </p>
+                        <ul class="product-card__features">
+                            <li><i class="fas fa-check"></i> Crown mouldings</li>
+                            <li><i class="fas fa-check"></i> Baseboards and trim</li>
+                            <li><i class="fas fa-check"></i> Window and door casings</li>
+                            <li><i class="fas fa-check"></i> Decorative borders</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="service-applications section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Design <span class="highlight">Applications</span></h2>
+                    <p class="section__description">
+                        Our architectural solutions enhance diverse environments and applications.
+                    </p>
+                </div>
+
+                <div class="applications__grid">
+                    <div class="application-item">
+                        <div class="application-item__icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Residential Interior Design</h3>
+                        <p>Elegant interior decorative elements that elevate home aesthetics and ambiance.</p>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="application-item__icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <h3>Commercial Exteriors</h3>
+                        <p>Professional facade treatments that enhance brand presence and curb appeal.</p>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="application-item__icon">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h3>Religious Structures</h3>
+                        <p>Reverent architectural designs for temples, churches, and spiritual buildings.</p>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="application-item__icon">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <h3>Hospitality Features</h3>
+                        <p>Sophisticated designs for hotels, restaurants, and luxury hospitality venues.</p>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="application-item__icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Educational Institutions</h3>
+                        <p>Notable architectural features for schools, universities, and training facilities.</p>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="application-item__icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h3>Public Monuments</h3>
+                        <p>Impressive civic installations and community landmarks with lasting impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="service-benefits section section--gray">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Why Choose Our <span class="highlight">Architectural Designs</span></h2>
+                </div>
+
+                <div class="benefits__list">
+                    <div class="benefit-item">
+                        <div class="benefit-item__number">01</div>
+                        <h3 class="benefit-item__title">Unlimited Creative Possibilities</h3>
+                        <p class="benefit-item__description">
+                            Our design team can translate virtually any vision into reality using advanced 
+                            EPS technology, ensuring your project stands out uniquely.
+                        </p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-item__number">02</div>
+                        <h3 class="benefit-item__title">Concrete-Like Appearance</h3>
+                        <p class="benefit-item__description">
+                            Our advanced coating process delivers an authentic concrete aesthetic while maintaining 
+                            all the lightweight advantages of EPS foam materials.
+                        </p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-item__number">03</div>
+                        <h3 class="benefit-item__title">Superior Durability</h3>
+                        <p class="benefit-item__description">
+                            Engineered to withstand weathering, UV exposure, and environmental elements while 
+                            maintaining visual integrity for decades.
+                        </p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-item__number">04</div>
+                        <h3 class="benefit-item__title">Lightweight Installation</h3>
+                        <p class="benefit-item__description">
+                            Substantially lighter than traditional materials, reducing installation costs, 
+                            timeline, and structural load requirements significantly.
+                        </p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-item__number">05</div>
+                        <h3 class="benefit-item__title">Cost-Effective Solutions</h3>
+                        <p class="benefit-item__description">
+                            Achieve premium architectural results at fraction of the cost compared to traditional 
+                            stone, concrete, or metal alternatives.
+                        </p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-item__number">06</div>
+                        <h3 class="benefit-item__title">Professional Customization</h3>
+                        <p class="benefit-item__description">
+                            Our experienced team handles every aspect from design consultation through professional 
+                            installation, ensuring exceptional final results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Showcase Section -->
         <section class="service-portfolio section">
             <div class="container">
                 <div class="section__header">
