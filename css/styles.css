@@ -242,8 +242,7 @@ input, textarea, select {
     font-family: var(--font-heading);
     font-size: var(--text-sm);
     font-weight: var(--font-semibold);
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.5px;
     color: var(--color-primary);
     margin-bottom: var(--spacing-2);
 }
@@ -380,8 +379,6 @@ input, textarea, select {
     font-family: var(--font-heading);
     font-size: var(--text-sm);
     font-weight: var(--font-semibold);
-    text-transform: uppercase;
-    letter-spacing: 1px;
     border-radius: var(--radius-md);
     transition: all var(--transition-base);
     cursor: pointer;
@@ -626,6 +623,7 @@ input, textarea, select {
 
 .hero--service {
     min-height: 50vh;
+    background: linear-gradient(135deg, rgba(15, 39, 68, 0.95) 0%, rgba(30, 58, 95, 0.95) 50%, rgba(15, 39, 68, 0.95) 100%), url('../assets/images/hero-bg.jpg') center/cover no-repeat;
 }
 
 @media (max-width: 768px) {
@@ -651,7 +649,7 @@ input, textarea, select {
 .hero__content {
     position: relative;
     z-index: 1;
-    text-align: left;
+    text-align: center;
     max-width: 900px;
     padding: var(--spacing-20) var(--spacing-4);
 }
@@ -662,6 +660,7 @@ input, textarea, select {
     margin-bottom: var(--spacing-6);
     color: var(--color-white);
     line-height: 1.1;
+    font-family: var(--font-heading);
 }
 
 .hero__description {
@@ -700,9 +699,9 @@ input, textarea, select {
 
 .hero__stat-label {
     font-size: var(--text-sm);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     opacity: 0.8;
+    font-weight: var(--font-medium);
 }
 
 .hero__scroll {
@@ -1393,6 +1392,13 @@ p + p {
     position: relative;
     background: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=600&fit=crop') center/cover no-repeat fixed;
     color: var(--color-white);
+    padding: var(--spacing-20) var(--spacing-4);
+}
+
+@media (max-width: 768px) {
+    .cta {
+        padding: var(--spacing-12) var(--spacing-4);
+    }
 }
 
 .cta__background {
@@ -1420,12 +1426,15 @@ p + p {
     font-size: clamp(2rem, 4vw, 3rem);
     color: var(--color-white);
     margin-bottom: var(--spacing-4);
+    font-family: var(--font-heading);
+    font-weight: var(--font-extrabold);
 }
 
 .cta__description {
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     margin-bottom: var(--spacing-8);
     opacity: 0.95;
+    font-family: var(--font-body);
 }
 
 .cta__buttons {
@@ -1433,6 +1442,16 @@ p + p {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing-4);
+}
+
+@media (max-width: 640px) {
+    .cta__buttons {
+        flex-direction: column;
+    }
+    
+    .cta__buttons .btn {
+        width: 100%;
+    }
 }
 
 .cta .btn--primary {
@@ -1653,10 +1672,16 @@ p + p {
 /* ===================================
    Footer
    =================================== */
-.footer {
+.footer{
     background-color: var(--color-gray-900);
     color: var(--color-gray-400);
     padding: var(--spacing-16) 0 0;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: var(--spacing-12) 0 0;
+    }
 }
 
 .footer__grid {
@@ -1718,6 +1743,8 @@ p + p {
     font-size: var(--text-lg);
     color: var(--color-white);
     margin-bottom: var(--spacing-6);
+    font-family: var(--font-heading);
+    font-weight: var(--font-bold);
 }
 
 .footer__list {
@@ -2200,7 +2227,7 @@ p + p {
     align-items: center;
     justify-content: center;
     margin: 0 auto var(--spacing-3) auto;
-    font-size: 28px;
+    font-size: 24px;
     color: var(--color-white);
     box-shadow: 0 4px 12px rgba(229, 114, 0, 0.3);
 }
@@ -2209,7 +2236,7 @@ p + p {
     color: var(--color-dark);
     font-weight: var(--font-bold);
     margin: var(--spacing-2) 0 var(--spacing-3) 0;
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     font-family: var(--font-heading);
 }
 
@@ -2218,6 +2245,7 @@ p + p {
     line-height: 1.6;
     font-size: var(--text-sm);
     margin: 0;
+    font-family: var(--font-body);
 }
 
 /* Product Cards */
@@ -2232,6 +2260,7 @@ p + p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 100%;
 }
 
 .product-card:not(.scroll-animate),
@@ -2272,7 +2301,7 @@ p + p {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 36px;
+    font-size: 32px;
     color: var(--color-white);
     margin-bottom: var(--spacing-6);
     box-shadow: 0 12px 24px rgba(12, 34, 105, 0.35);
@@ -2287,7 +2316,7 @@ p + p {
 .product-card__title {
     color: var(--color-dark);
     font-weight: var(--font-bold);
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     margin-bottom: var(--spacing-3);
     line-height: 1.4;
     font-family: var(--font-heading);
@@ -2392,7 +2421,7 @@ p + p {
     align-items: center;
     justify-content: center;
     margin: 0 auto var(--spacing-4) auto;
-    font-size: 28px;
+    font-size: 24px;
     color: var(--color-white);
     box-shadow: 0 10px 28px rgba(229, 114, 0, 0.4);
     transition: all var(--transition-base);
@@ -2405,7 +2434,7 @@ p + p {
 
 .application-item h3 {
     color: var(--color-dark);
-    font-weight: var(--font-bold);
+    font-weight: var(--font-semibold);
     font-size: var(--text-base);
     margin-bottom: var(--spacing-2);
     font-family: var(--font-heading);
@@ -2415,6 +2444,7 @@ p + p {
     color: var(--color-gray-600);
     font-size: var(--text-sm);
     line-height: 1.6;
+    font-family: var(--font-body);
 }
 
 /* Benefit Items */
@@ -2503,7 +2533,7 @@ p + p {
 
 .products__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: var(--spacing-8);
     margin-top: var(--spacing-12);
 }
@@ -2566,6 +2596,15 @@ p + p {
     font-size: var(--text-lg);
     text-align: center;
     font-family: var(--font-heading);
+}
+
+/* Service Portfolio Section */
+.service-portfolio {
+    background-color: #f9fafb;
+}
+
+.service-portfolio .section__header {
+    margin-bottom: var(--spacing-12);
 }
 
 /* Responsive Design */
@@ -2754,18 +2793,42 @@ p + p {
         padding: var(--spacing-4);
     }
 
+    .overview-card p {
+        font-size: var(--text-xs);
+        line-height: 1.5;
+    }
+
+    .product-card__description {
+        font-size: var(--text-xs);
+    }
+
+    .application-item p {
+        font-size: var(--text-xs);
+    }
+
     .product-card__icon,
     .overview-card__icon {
         width: 48px;
         height: 48px;
-        font-size: 24px;
+        font-size: 20px;
+    }
+
+    .application-item__icon {
+        width: 52px;
+        height: 52px;
+        font-size: 20px;
     }
 
     .overview-card h3 {
         font-size: var(--text-sm);
+        margin: var(--spacing-2) 0 var(--spacing-2) 0;
     }
 
     .application-item h3 {
+        font-size: var(--text-sm);
+    }
+
+    .product-card__title {
         font-size: var(--text-sm);
     }
 
@@ -2952,9 +3015,8 @@ p + p {
     padding: var(--spacing-2) var(--spacing-4);
     border-radius: var(--radius-full);
     font-size: var(--text-xs);
-    font-weight: var(--font-bold);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: var(--font-semibold);
+    letter-spacing: 0px;
     margin-bottom: var(--spacing-4);
     box-shadow: 0 4px 15px rgba(229, 114, 0, 0.3);
 }
@@ -2969,6 +3031,17 @@ p + p {
     flex-wrap: wrap;
     gap: var(--spacing-4);
     margin-top: var(--spacing-8);
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .hero__cta {
+        flex-direction: column;
+    }
+    
+    .hero__cta .btn {
+        width: 100%;
+    }
 }
 
 /* ===================================
@@ -3092,12 +3165,10 @@ p + p {
     margin-top: var(--spacing-3);
     background: var(--color-primary);
     color: var(--color-white);
-    padding: var(--spacing-1) var(--spacing-3);
+    padding: var(--spacing-2) var(--spacing-3);
     border-radius: var(--radius-full);
     font-size: var(--text-xs);
-    font-weight: var(--font-bold);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-weight: var(--font-semibold);
 }
 
 /* ===================================
@@ -3170,8 +3241,19 @@ p + p {
 }
 
 @media (max-width: 768px) {
-    .hero__cta {
-        gap: var(--spacing-3);
+    .service-overview__grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-4);
+    }
+
+    .products__grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-6);
+    }
+
+    .applications__grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-4);
     }
 }
 
