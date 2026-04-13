@@ -550,6 +550,25 @@ if (contactForm) {
 }
 
 // ===================================
+// Thickness Dropdown Toggle (Conditional for ECOPANEL)
+// ===================================
+const serviceSelect = document.getElementById('service');
+const thicknessGroup = document.getElementById('thickness-group');
+
+if (serviceSelect && thicknessGroup) {
+    serviceSelect.addEventListener('change', (e) => {
+        if (e.target.value === 'commercial') {
+            thicknessGroup.style.display = 'block';
+            // Smooth animation
+            thicknessGroup.style.animation = 'slideDown 0.3s ease forwards';
+        } else {
+            thicknessGroup.style.display = 'none';
+            thicknessGroup.style.animation = 'slideUp 0.3s ease forwards';
+        }
+    });
+}
+
+// ===================================
 // Lazy Loading Images
 // ===================================
 function initLazyLoading() {
