@@ -459,7 +459,7 @@ input, textarea, select {
 
 .header.scrolled .nav__link:hover,
 .header.scrolled .nav__link.active {
-    color: var(--color-secondary-light);
+    color: var(--color-gray-700);
 }
 
 .header.scrolled .nav__logo-text {
@@ -518,11 +518,6 @@ input, textarea, select {
     transition: color var(--transition-fast);
 }
 
-.nav__link:hover,
-.nav__link.active {
-    color: var(--color-secondary-light);
-}
-
 .nav__link::after {
     content: '';
     position: absolute;
@@ -537,11 +532,6 @@ input, textarea, select {
 .nav__link:hover::after,
 .nav__link.active::after {
     width: 100%;
-}
-
-.nav__link:hover,
-.nav__link.active {
-    color: var(--color-primary);
 }
 
 .nav__actions {
