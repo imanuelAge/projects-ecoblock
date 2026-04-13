@@ -550,22 +550,6 @@ if (contactForm) {
 }
 
 // ===================================
-// Thickness Dropdown Toggle
-// ===================================
-const serviceSelect = document.getElementById('service');
-const thicknessGroup = document.getElementById('thickness-group');
-
-if (serviceSelect) {
-    serviceSelect.onchange = function() {
-        if (this.value === 'commercial') {
-            thicknessGroup.style.display = 'block';
-        } else {
-            thicknessGroup.style.display = 'none';
-        }
-    };
-}
-
-// ===================================
 // Lazy Loading Images
 // ===================================
 function initLazyLoading() {
@@ -587,6 +571,39 @@ function initLazyLoading() {
 }
 
 initLazyLoading();
+
+// ===================================
+// Gallery Dropdown Toggle
+// ===================================
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryToggles = document.querySelectorAll('.gallery__toggle');
+    
+    galleryToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            const galleryContent = document.getElementById(`${category}-gallery`);
+            
+            // Close other galleries
+            document.querySelectorAll('.gallery__content.active').forEach(content => {
+                if (content !== galleryContent) {
+                    content.classList.remove('active');
+                }
+            });
+            
+            document.querySelectorAll('.gallery__toggle.active').forEach(btn => {
+                if (btn !== this) {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Toggle current gallery
+            if (galleryContent) {
+                galleryContent.classList.toggle('active');
+                this.classList.toggle('active');
+            }
+        });
+    });
+});
 
 // ===================================
 // Keyboard Navigation
