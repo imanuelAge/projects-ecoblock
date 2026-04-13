@@ -472,12 +472,12 @@ input, textarea, select {
 .nav__logo {
     display: flex;
     align-items: center;
-    gap: var(--spacing-2);
+    gap: 0;
 }
 
 .nav__logo-img {
-    width: 55px;
-    height: 55px;
+    width: 80px;
+    height: 80px;
 }
 
 .nav__logo-text {
@@ -617,7 +617,7 @@ input, textarea, select {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+    background: url('../assets/images/ecobloc-building.jpeg') center/cover no-repeat;
     color: var(--color-white);
 }
 
@@ -638,12 +638,8 @@ input, textarea, select {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(15, 39, 68, 0.92) 0%,
-        rgba(30, 58, 95, 0.85) 50%,
-        rgba(15, 39, 68, 0.92) 100%
-    );
+    background: transparent;
+    display: none;
 }
 
 .hero__content {
@@ -656,18 +652,21 @@ input, textarea, select {
 
 .hero__title {
     font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: var(--font-extrabold);
+    font-weight: 900;
     margin-bottom: var(--spacing-6);
     color: var(--color-white);
     line-height: 1.1;
     font-family: var(--font-heading);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero__description {
     font-size: var(--text-lg);
     max-width: 700px;
     margin: 0 auto var(--spacing-8);
-    opacity: 0.9;
+    opacity: 1;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero__buttons {
